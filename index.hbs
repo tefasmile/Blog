@@ -1,45 +1,47 @@
 {{!< default}}
 
+{{> "message"}}
+
 {{!-- Header --}}
-{{> "header"}}
+{{!-- {{> "header"}} --}}
 
 {{!-- Portada --}}
-{{> "cover"}}
+{{!-- {{> "cover"}} --}}
 
 {{!-- Menú --}}
-{{> "menu"}}
-
+{{!-- {{> "menu"}}
+ --}}
 {{!-- Busqueda --}}
-{{> "search"}}
+{{!-- {{> "search"}} --}}
 
 {{!-- Lenguajes para aprender --}}
-<section class="code">
+{{!-- <section class="code">
     <strong class="code__title">¿Qué te gustaría aprender hoy?</strong>
     
-    <section class="code__languages">
+    <section class="code__languages"> --}}
         
         {{!-- HTML --}}
-        <figure>
+{{!--         <figure>
             <a href="/tag/html/">
                 <img src='{{asset "images/html-mobile.jpg"}}' 
                      srcset='{{asset "images/html-tablet.jpg"}} 412w,
                              {{asset "images/html-desktop.jpg"}} 1080w'
                      alt="html" />
             </a>
-        </figure>
+        </figure> --}}
         
         {{!-- CSS --}}
-        <figure>
+{{!--         <figure>
             <a href="/tag/css/">
                 <img src='{{asset "images/css-mobile.jpg"}}' 
                      srcset='{{asset "images/css-tablet.jpg"}} 412w,
                              {{asset "images/css-desktop.jpg"}} 1080w'
                      alt="css" />
             </a>
-        </figure>
+        </figure> --}}
 
         {{!-- JavaScript --}}
-        <figure>
+{{!--         <figure>
             <a href="/tag/javascript/">
                 <img src='{{asset "images/javascript-mobile.jpg"}}' 
                      srcset='{{asset "images/javascript-tablet.jpg"}} 412w,
@@ -49,19 +51,19 @@
         </figure>
 
     </section>
-</section>
+</section> --}}
 
 {{!-- Contenido --}}
-<section id="post__content" class="post__content" role="main">
+{{!-- <section id="post__content" class="post__content" role="main">
     {{> "loop"}}
-</section>
+</section> --}}
 
 {{!-- Newsletter --}}
-{{> "newsletter"}}
+{{!-- {{> "newsletter"}} --}}
 
 {{!-- Paginación --}}
-{{pagination}}
+{{!-- {{pagination}} --}}
 
 {{!-- Footer --}}
-{{> "footer"}}
+{{!-- {{> "footer"}} --}}
 
