@@ -1,61 +1,62 @@
 {{!-- Sitio para artículos --}}
 
 {{!< default}}
+{{> "message"}}
 
-{{#post}}
+{{!-- {{#post}} --}}
     {{!-- Barra de progreso --}}
-    {{> "progress"}}
+    {{!-- {{> "progress"}} --}}
     
     {{!-- Header --}}
-    {{> "header"}}
+   {{!--  {{> "header"}} --}}
 
     {{!-- Portada --}}
-    {{> "cover-post"}}
+    {{!-- {{> "cover-post"}} --}}
 
     {{!-- Menú --}}
-    {{> "menu"}}
+ {{!--    {{> "menu"}} --}}
     
     {{!-- Busqueda --}}
-    {{> "search"}}
+    {{!-- {{> "search"}} --}}
 
-    <main class="content" role="main">
+   {{!--  <main class="content" role="main">
         <article class="post-container {{post_class}}">
-
+ --}}
             {{!-- Redes sociales --}}
-            <section class="post-social">
+           {{!--  <section class="post-social">
                 <div class="addthis_sharing_toolbox"></div>
             </section>
-            
+             --}}
             {{!-- Lectura --}}
-            <section class="post-content">
+        {{!--     <section class="post-content">
                 {{content}}
-            </section>
+            </section> --}}
             
             {{!-- Redes sociales --}}
-            <section class="post-social">
+           {{!--  <section class="post-social">
                 <strong class="post-socialText">¿Te gustó el artículo?, por favor, ayudame a compartir para que otras personas puedan leerlo.</strong>
                 <div class="addthis_sharing_toolbox"></div>
-            </section>
+            </section> --}}
             
             {{!-- Newsletter --}}
-            {{> "newsletter"}}
+         {{!--    {{> "newsletter"}} --}}
 
             {{!-- Tags --}}
-            <section class="tags">
+          {{!--   <section class="tags">
                 {{#foreach tags}}
                     <a href="{{url}}" class="tag">
                         {{name}}
                     </a>
                 {{/foreach}}
-            </section>
+            </section> --}}
             
             {{!-- Autor --}}
-            {{#author}}
-
-                <section class="post__authorDescription">
+           {{!--  {{#author}} --}}
+{{!-- 
+                <section class="post__authorDescription"> --}}
                     
                     {{!-- Imagen del autor --}}
-                    {{#if image}}
+                {{!--     {{#if image}}
                     <figure class="post__authorImage">
                         <a class="img" href="{{url}}">
                             <img src="{{image}}" alt="Fili Santillán">
@@ -64,10 +65,10 @@
                             <a href="{{website}}"><button class="btn-default">Sobre mí</button></a>
                         {{/if}}
                     </figure>
-                    {{/if}}
+                    {{/if}} --}}
                     
                     {{!-- Información del autor --}}
-                    <section class="post__authorInfo">
+{{!--                     <section class="post__authorInfo">
                         <h4><a class="post__authorName"href="{{url}}">{{name}}</a></h4>
 
                         {{#if location}}
@@ -84,19 +85,19 @@
                         {{/if}}
 
                     </section>
-                </section>
+                </section> --}}
 
-            {{/author}}
+      {{!--       {{/author}} --}}
 
 
             {{!-- Disqus - Comentarios s--}}
-            {{> "disqus"}}
+            {{!-- {{> "disqus"}} --}}
 
 
-        </article>
-    </main>
+ {{!--        </article>
+    </main> --}}
 
     {{!-- Footer --}}
-    {{> "footer"}}
+    {{!-- {{> "footer"}} --}}
 
-{{/post}}
+{{!-- {{/post}} --}}
