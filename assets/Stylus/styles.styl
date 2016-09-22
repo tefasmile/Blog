@@ -50,11 +50,11 @@
     
 //Color de la barra al hacer scroll (Webkit)
 .progress::-webkit-progress-value 
-     background-color $ColorBlue
+     background-color $ColorGreen
 
 //Color de la barra al hacer scroll (Moz)
 .progress::-moz-progress-bar 
-     background-color $ColorBlue
+     background-color $ColorGreen
 
 
 /*------------------------------------*\
@@ -76,8 +76,12 @@
 @media all and (min-width 1080px)
     .header__title
         .nav
+            margin .2rem 1.3rem 0 4.5rem
+            display flex
+            justify-content flex-end
             li
                 a
+                    color: $ColorPink
                     transition 0.3s
                     
                     &:hover
@@ -119,13 +123,16 @@
 @media all and (min-width 1080px)
     .cover__tags
         height 350px !important
-        
+       
     .cover      
         .logo__author
             margin 0
             bottom -5.5rem
             img
                 width 170px
+        .logo
+            .img
+                width 350px
             
     .info-block
             
@@ -142,7 +149,7 @@
                     
                     &:hover
                         transform scale(1.2)
-                        color $ColorBlue
+                        color $ColorPink-2
                         
     .cover__feedly
         img
@@ -215,6 +222,14 @@
 .code
     text-align center
 
+// Seccion de temas aprendizaje
+.code__languages
+    display flex
+    justify-content center
+    
+    figure
+        flex-basis 15%
+
 // Resolución para dispositivos de 360px
 @media all and (min-width 360px)
     .code
@@ -282,6 +297,7 @@
     .post-content 
         line-height 1.8rem
         font-size 1.2rem
+        font-family $FontContent
         
         img
             display block
@@ -351,10 +367,10 @@
             border none
             
         .post__header
-            border-bottom 3px solid $ColorBlue
+            border-bottom 3px solid $ColorPink
             .post__title
                 a
-                    color $ColorBlue
+                    color $ColorPink
                     
         .post__description
             display none
@@ -370,6 +386,7 @@
                     vertical-align top
                     margin 0.9rem 0.5rem 0 0
                     display inline-block
+                    color $ColorPink-2
                     
                 .post__image
                     margin 0.2rem 0.5rem 0 0
@@ -379,9 +396,10 @@
                     border-radius 50%
             
         .btn-default
-            border 1px solid $ColorBlue
-            box-shadow 3px 3px 0px $ColorBlue
+            border 1px solid $ColorPink-2
+            box-shadow 3px 3px 0px $ColorPink-2
             padding 0.8rem 1.5rem
+            color $ColorPink-2
             
 // Imagen de los artículos
 .post__cover
@@ -395,13 +413,13 @@
 // Título de los artículos
 .post__header
     padding 0 0 0.5rem 0
-    border-bottom 3px solid $ColorDark
+    border-bottom 3px solid $colorPrueba
     margin 0 0.5rem
     
     .post__title
         margin 0.6rem 0
         a
-            color $ColorDark
+            color $colorPrueba
 
 // Descripción de los artílos
 .post__description
@@ -503,9 +521,11 @@
                 
             .post__tags
                 display block
+                a
+                    color $ColorGreen
                 .tag
                     padding 0.5rem
-                    border 2px solid $ColorBlue
+                    border 2px solid $ColorGreen
                     margin 0.2rem
                     display inline-block
                     
@@ -519,7 +539,7 @@
                         position absolute
                         bottom -1.2rem
                         right -1.2rem
-                        border 2px solid $ColorBlue
+                        border 2px solid $ColorGreen
                         
 /*------------------------------------*\
     $Author
@@ -593,15 +613,15 @@
 // Newsletter
 .newsletter
     margin 1rem 0
-    
+
 // Fomulario del newsletter
-.newsletter__form
+form
     text-align center
     padding 1rem
-    background-color $ColorDark
+    background-color $ColorPurpe
     color white
     margin 1rem 0 0 0
-    
+       
 //Contenedor del newsletter - Títulos - Inputs - Botón
 .newsletter__content
     .newsletter__title
@@ -621,18 +641,18 @@
             box-sizing border-box
             padding 0.8rem 0.5rem
             margin 0.5rem 0
-            border 2px solid $ColorBlue
+            border 2px solid $ColorPink
             color white
             background-color $ColorDark-2
             
         input[type="submit"]
+            background-color $ColorGreen 
+            border-radius 3px 3px
+            box-shadow 2px 2px 0px $colorPrueba
+            color $ColorPurpe
+            font-weight bold
             padding 0.8rem
-            border 1px solid $ColorBlue
-            box-shadow 2px 2px 0px $ColorBlue
-            background none
-            color $ColorBlue
             text-transform uppercase
-            background-color $ColorDark-2
             
 // Resolución para dispositivos de 412px
 @media all and (min-width 412px)
@@ -658,7 +678,7 @@
     .newsletter__form
         padding 2rem 0
         margin 0 auto
-        max-width 868px
+        //max-width 868px
         
     .newsletter__content
         width 600px
@@ -808,6 +828,7 @@
     .footer__list
         display flex
         justify-content center
+        color white
         
         .footer__item
             margin 0 0.7rem
@@ -888,7 +909,6 @@
         padding 0.5rem 2rem
     .footer__info
         width 30%
-        
     .footer__nav
         width 30%
         display block

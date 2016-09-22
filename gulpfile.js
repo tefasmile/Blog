@@ -1,6 +1,6 @@
 // Dependencias
 var gulp = require('gulp'),
-    stylus = require('gulp-stylus'),
+    stylus = require('gulp-stylus');
     uglify = require('gulp-uglify'),
     minifyCss = require('gulp-minify-css'),
     concat = require('gulp-concat'),
@@ -9,18 +9,27 @@ var gulp = require('gulp'),
     stylusTasks = ['styles'];
 
 // Path - Watch
-path.watch = {
-    stylus: ['./assets/stylus/*.styl']
-};
+/*path.watch = {
+    stylus: ['./assets/Stylus/*.styl']
+};*/
 
 // Monitorea cambios en los estilos
-gulp.task('watch', function () {
+/*gulp.task('watch', function () {
     gulp.watch(path.watch.stylus, stylusTasks);
+});*/
+
+gulp.task('default', function() {
+    gulp.src('./assets/Stylus/*.styl')
+        .pipe(stylus({
+          compress: true
+        }))
+        .pipe(gulp.dest('./assets/css/'));
 });
+
 
 // Compila stylus a css
 gulp.task('styles', function () {
-  gulp.src('./assets/stylus/styles.styl')
+  gulp.src('./assets/Stylus/styles.styl')
     .pipe(stylus({
       compress: true
     }))
